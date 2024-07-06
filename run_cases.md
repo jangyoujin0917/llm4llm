@@ -1,24 +1,39 @@
 ## Math Prove
 - Prompt
 ```
-Linear transformation is a function that satisfies two features.
-One is homogeneity, and other is additivity.
-
-Linear transformation of the subspace is also subspace.
-Prove or disprove this statement based on given contents.
+20명이 원래 있던 사과 100개를 한 사람당 3개씩 먹으려고 한다.
+이때 그중 한 사람이 한 사람 분량의 1/3만 먹고 그만 먹는다면, 총 사과가 몇개가 남아?
 ```
 - AI answer with level division
 ```
-The statement that the linear transformation of a subspace is also a subspace can be proven based on the given contents. A subspace of a vector space is defined as a subset of the vector space that is closed under vector addition and scalar multiplication.
+주어진 정보를 바탕으로 단계별로 계산해보겠습니다:
 
-A linear transformation is a function that maps vectors from one vector space to another, preserving the operations of vector addition and scalar multiplication. This means that for any two vectors u and v in the domain vector space, and any scalar c, the following properties hold:
+1. 한 사람당 먹을 사과 개수: 3개
+2. 한 사람이 한 사람 분량의 1/3만 먹은 사과 개수: 1개 (3개 * 1/3)
+3. 총 사과 개수에서 한 사람이 먹은 사과 개수를 뺀 개수: 99개 (100개 - 1개)
+4. 나머지 19명이 먹을 사과 개수: 57개 (3개 * 19명)
+5. 3단계에서 남은 사과 개수에서 나머지 19명이 먹을 사과 개수를 뺀 개수: 42개 (99개 - 57개)
 
-1. Homogeneity: T(c * u) = c * T(u)
-2. Additivity: T(u + v) = T(u) + T(v)
+따라서, 마지막에 남은 사과의 개수는 42개입니다.
+```
+- Naive AI
+```
+단계 1: 처음에 각 사람이 먹는 사과의 개수를 계산합니다.
+한 사람당 3개의 사과를 먹으려고 하므로, 20명의 사람들이 각각 3개의 사과를 먹습니다.
 
-Given that the domain of the linear transformation is a subspace, and the transformation preserves the operations of vector addition and scalar multiplication, it follows that the image of the transformation, which is the range of all possible output vectors, will also be closed under these operations.
+3개의 사과/사람 * 20명 = 60개의 사과
 
-Therefore, the image of a linear transformation, when the domain is a subspace, is itself a subspace of the codomain vector space. This is because the image is closed under vector addition and scalar multiplication, which are the defining properties of a subspace.
+단계 2: 한 사람이 먹는 사과의 개수의 1/3를 계산합니다.
+한 사람 분량의 1/3로 식사를 중단하는 사람이 있다면, 이 사람이 먹는 사과의 개수는 다음과 같습니다.
 
-In summary, the linear transformation of a subspace is indeed a subspace, as the transformation preserves the properties that define a subspace.
+1/3 * 3개의 사과/사람 = 1개의 사과
+
+단계 3: 사과가 몇 개 남아 있는지 계산합니다.
+한 사람이 식사를 중단하면서 1개의 사과를 먹으므로, 20명의 사람들이 모두 3개의 사과를 먹는 경우와 비교하여 남은 사과의 개수는 다음과 같습니다.
+
+20명 * 3개의 사과/사람 = 60개의 사과
+-(한 명이 먹은 1개의 사과)
+= 59개의 사과
+
+최종 답변: 59개의 사과가 남아 있습니다.
 ```
